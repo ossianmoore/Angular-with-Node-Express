@@ -13,11 +13,17 @@ MatButtonModule,
 MatToolbarModule,
 MatExpansionModule
 } from '@angular/material';
+import { CreateComponent } from './create/create.component';
+import { ReadComponent } from './read/read.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    CreateComponent,
+    ReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,8 @@ MatExpansionModule
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,14 +7,12 @@ import { MovieServiceService } from '../Services/movie-service.service';
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit {
-
-  MyMovies:any = [];
-
-  constructor(private movieService:MovieServiceService) { }
+  MyMovies: any = [];
+  constructor(private movieService: MovieServiceService) { }
 
   ngOnInit() {
-    this.movieService.GetMovieInformation().subscribe((data)=>{
-      this.MyMovies = data.Search;
+    this.movieService.GetMovieInformation().subscribe((data) => {
+      this.MyMovies = data.movies;
       console.log(this.MyMovies);
     })
   }
